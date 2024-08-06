@@ -18,15 +18,24 @@ _python run ingredient_server.py_
 
 
 ## How to programmatically REQUEST data from the microservice
-To request data from the microservice you will connect to the server via the port and send a string to the microservice requesting a random ingredient be generated. 
+To request data from the microservice you will set up the communicaiton channel using zeroMQ and send a string to the microservice requesting a random ingredient be generated. 
+Example:
 
+            context = zmq.Context()
             socket = context.socket(zmq.REQ)
             socket.connect("tcp://localhost:5560")
-
-            print(f"Sending request for random ingredient")
             socket.send_string("Generate random recipe ingredient")
 
 ## How to programmatically RECEIVE data from the microservice
+To receive data from the microservice you will set up the communicaiton channel using zeroMQ and when the microservice receives a string from the main program, it will process the request and send back a random ingredient in the form of a string back to the main program.
+Example:
+
+            socket = context.socket(zmq.REP)
+            socket.bind("tcp://localhost:5560")
+            if message.decode() == "Generate random recipe ingredient":
+                        random_ingredient = random.choice(available_ingredients)
+                        socket.send_string(random_ingredient)
+
 
 ## UML sequence diagram
 
