@@ -10,7 +10,6 @@ def recipe_storage_app():
         print("Enter an option to proceed:")
         print("1. Store a recipe")
         print("2. Generate random ingredient")
-        print("All other keys to Exit app\n")
 
         user_input = input()
 
@@ -32,9 +31,6 @@ def recipe_storage_app():
 
             message = socket.recv()
             print(f"\nReceived random ingredient: {message.decode()}")
-
-        else:
-            break
 
 
 if __name__ == "__main__":
