@@ -2,7 +2,7 @@
 
 This microservice will generate a random ingredient from a pre-defined list of ingredients.
 
-# Install ZeroMQ (Python)
+### Install ZeroMQ (Python)
 To get started you should install ZeroMQ. Using a terminal, install the package by typing the following command:
 
 _pip install pyzmq_
