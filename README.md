@@ -10,14 +10,15 @@ _pip install pyzmq_
 # Run the Microservice
 Using a terminal, type the following command:
 
-python ingredient_test_program.py
+_python ingredient_test_program.py_
 
 Using a second terminal, type the following command:
 
-python run ingredient_server.py
+_python run ingredient_server.py_
 
 
-Clear instructions for how to programmatically REQUEST data from the microservice you implemented. Include an example call.
+##How to programmatically REQUEST data from the microservice
+Include an example call.
 Clear instructions for how to programmatically RECEIVE data from the microservice you implemented.
 UML sequence diagram showing how requesting and receiving data works. Make it detailed enough that your teammate (and your grader) will understand.
 
