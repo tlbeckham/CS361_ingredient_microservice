@@ -14,7 +14,7 @@ _python ingredient_test_program.py_
 
 Using a second terminal, type the following command:
 
-_python run ingredient_server.py_
+_python ingredient_server.py_
 
 
 ## How to programmatically REQUEST data from the microservice
